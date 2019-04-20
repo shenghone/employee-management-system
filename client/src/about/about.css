@@ -1,0 +1,397 @@
+.about {
+  display: grid;
+  position: absolute;
+  width: 100%;
+  padding: 20vh 0 0 0;
+  margin-top: 15vh;
+  z-index: 2;
+  grid-template-columns: 50vw 50vw;
+  grid-template-areas: "d e";
+  z-index: 500;
+  animation: toFadeIn 2s forwards;
+  opacity: 0;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  animation: toFadeIn 1s forwards;
+}
+
+.darkTheme {
+  background: rgba(0, 0, 0, 0.93);
+  color: #fff;
+}
+
+.brightTheme {
+  background: #cecece;
+}
+
+.aboutFont {
+  color: #000;
+}
+
+.about > .website {
+  grid-area: e;
+  display: grid;
+  margin-top: 5vh;
+  height: 60vh;
+  width: 50vw;
+  grid-template-columns: 20vw 20vw 10vw;
+  grid-template-rows: repeat(3, 20vh);
+  grid-template-areas:
+    "a a a"
+    "a a a"
+    "b c cc";
+}
+
+.wiperRight,
+.wiperLeft {
+  background: rgb(255, 255, 255, 0.9);
+  border-radius: 0.2rem;
+  height: 30vh;
+  width: 50vw;
+}
+
+.website > div:first-child {
+  grid-area: a;
+  display: grid;
+  align-self: center;
+  z-index: -1;
+  width: 50vw;
+}
+
+.website > div:nth-child(2) {
+  grid-area: a;
+  justify-self: center;
+  align-self: center;
+}
+
+.website > .description {
+  grid-area: a;
+  justify-self: center;
+  align-self: center;
+  text-transform: uppercase;
+
+  text-shadow: 0.01rem 0.1rem 0.1rem rgba(256, 256, 256, 0.3);
+}
+
+.description > h1 {
+  display: grid;
+  align-self: center;
+  font-size: 4rem;
+  letter-spacing: 1.3rem;
+  text-transform: uppercase;
+}
+
+@keyframes toFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.description > h4 {
+  display: grid;
+  align-self: center;
+  font-size: 1rem;
+  color: rgb(169, 18, 18);
+}
+
+.frontEnd {
+  grid-area: b;
+  justify-self: center;
+  align-self: start;
+  letter-spacing: 0.1em;
+}
+
+.frontEnd > h3 {
+  text-decoration: underline;
+}
+
+.backEnd {
+  grid-area: c;
+  justify-self: center;
+  align-self: start;
+  letter-spacing: 0.1em;
+}
+
+.backEnd > h3 {
+  text-decoration: underline;
+}
+
+.websiteDetail {
+  position: relative;
+  display: grid;
+  justify-self: center;
+  align-self: start;
+  grid-template-rows: 2vh 58vh;
+  grid-template-columns: 50vw;
+
+  line-height: 1.3rem;
+  grid-template-areas:
+    "f"
+    "g";
+}
+
+.descContent {
+  width: 32vw;
+  display: grid;
+  grid-area: g;
+  justify-self: center;
+  line-height: 1.5rem;
+  text-align: justify;
+  letter-spacing: 0.1rem;
+  font-size: 0.9rem;
+}
+
+.author {
+  display: grid;
+  position: relative;
+  top: 20vh;
+  height: 60vh;
+  width: 100%;
+  grid-template-columns: 50vw 50vw;
+  grid-template-areas: "h i";
+}
+
+.authorLeft {
+  position: relative;
+  grid-area: h;
+  display: grid;
+  grid-template-columns: 12vw 33vw 5vw;
+  grid-template-rows: repeat(3, 20vh);
+  grid-template-areas:
+    "j j j"
+    "j j j"
+    "k l m";
+}
+
+.linkToData {
+  text-decoration: none;
+  color: rgba(160, 17, 17, 0.85);
+}
+
+.authorLeft > div:first-child {
+  display: grid;
+  grid-area: j;
+  align-self: center;
+  justify-self: end;
+  z-index: -1;
+}
+
+.authorLeft > div:nth-child(2) {
+  display: grid;
+  grid-area: j;
+  align-self: center;
+}
+
+.authorDescription {
+  display: grid;
+  grid-area: j;
+  justify-self: center;
+}
+
+.authorDescription > h1 {
+  font-size: 4rem;
+  letter-spacing: 1.3rem;
+  text-transform: uppercase;
+}
+
+.authorDescription > h4 {
+  font-size: 1rem;
+  color: rgb(169, 18, 18);
+}
+
+.authorDescription > h5 {
+  letter-spacing: 0.2rem;
+  color: rgb(95, 95, 95);
+}
+
+.authorRight {
+  grid-area: i;
+  width: 32vw;
+  display: grid;
+  justify-self: center;
+}
+
+.authorRight > p {
+  position: relative;
+  display: grid;
+  justify-self: center;
+  line-height: 2rem;
+  font-size: 1rem;
+  text-align: justify;
+  align-self: center;
+}
+
+.contact {
+  grid-area: l;
+  justify-self: center;
+}
+
+.contact > ul {
+  display: block;
+}
+
+.contact > ul > li {
+  display: inline-block;
+  margin: 1rem;
+  cursor: pointer;
+}
+
+.contact > ul > li:hover {
+  color: #fff;
+}
+
+@media screen and (max-width: 850px) {
+  .about {
+    margin-top: 16vh;
+    padding: 8vh 0 0 0;
+    height: 200vh;
+    width: 100vw;
+    grid-template-columns: 100vw;
+    grid-template-rows: 70vh 80vh 90vh;
+    grid-template-areas:
+      "a"
+      "b"
+      "c";
+  }
+  .about > .website {
+    margin: 0;
+    padding: 10vh 0 0 0;
+    width: 100vw;
+    display: grid;
+    grid-area: a;
+    grid-template-columns: 40vw 40vw 20vw;
+    grid-template-rows: repeat(3, 20vh);
+    grid-template-areas:
+      "xx aa aa"
+      "xx aa aa"
+      "bb bb bb";
+  }
+
+  .wiperRight,
+  .wiperLeft {
+    width: 60vw;
+  }
+
+  .website > div:first-child {
+    grid-area: aa;
+  }
+
+  .website > div:nth-child(2) {
+    grid-area: aa;
+  }
+
+  .frontEnd {
+    grid-area: bb;
+    margin: 0 35% 0 0;
+  }
+
+  .backEnd {
+    grid-area: bb;
+    margin: 0 0 0 40%;
+  }
+
+  .description {
+    grid-area: aa;
+  }
+
+  .websiteDetail {
+    grid-area: b;
+  }
+  .descContent {
+    width: 50vw;
+    line-height: 1.7rem;
+  }
+
+  .author {
+    top: 0;
+    grid-area: c;
+    grid-template-columns: 100vw;
+    grid-template-rows: 45vh 40vh;
+    grid-template-areas:
+      "c"
+      "d";
+  }
+
+  .authorLeft {
+    position: relative;
+    grid-area: c;
+    display: grid;
+    width: 100vw;
+    grid-template-columns: 20vw 40vw 40vw;
+    grid-template-rows: 20vh 20vh 10vh;
+    grid-template-areas:
+      "cc cc ccc"
+      "cc cc ccc"
+      "e  e  e";
+  }
+
+  .authorLeft > div:first-child {
+    grid-area: cc;
+  }
+  .authorLeft > div:nth-child(2) {
+    grid-area: cc;
+  }
+  .contact {
+    grid-area: e;
+  }
+  .authorRight {
+    margin: 0;
+    padding: 0;
+    top: 0;
+    line-height: 1.7rem;
+    width: 50vw;
+    grid-area: d;
+    align-self: center;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .about {
+    grid-template-rows: 70vh 90vh 90vh;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .about {
+    grid-template-rows: 70vh 80vh 90vh;
+  }
+
+  .about > .website {
+    grid-template-columns: 20vw 40vw 40vw;
+  }
+
+  .authorLeft {
+    grid-template-columns: 40vw 40vw 20vw;
+  }
+  .contact {
+    transform: translateX(-10%);
+  }
+  .authorRight,
+  .descContent {
+    width: 65vw;
+  }
+  .description > h1,
+  .authorDescription > h1 {
+    font-size: 2.5rem;
+  }
+  .wiperRight,
+  .wiperLeft {
+    height: 20vh;
+    width: 80vw;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .about {
+    grid-template-rows: 70vh 90vh 90vh;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .about {
+    grid-template-rows: 70vh 94vh 90vh;
+  }
+}

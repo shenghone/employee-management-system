@@ -1,0 +1,36 @@
+.contentList {
+  list-style: none;
+  position: relative;
+  margin: 0;
+  padding: 1em;
+}
+
+#createNewTeamButton {
+  grid-row: 3 / span 1;
+  grid-column: 7 / span 1;
+  align-self: center;
+  justify-self: end;
+  outline: none;
+  min-width: 45px;
+}
+
+.teamSearchBar {
+  grid-row: 3 / span 1;
+  grid-column: 8 / span 2;
+  align-self: center;
+  justify-self: end;
+}
+
+.teamsTable td,
+.teamsTable th {
+  width: 25%;
+}
+
+@media screen and (max-width: 1000px) {
+  #createNewTeamButton {
+    grid-column: 2 / span 1;
+    grid-row: 3 / span 1;
+    align-self: center;
+    justify-self: start;
+  }
+}

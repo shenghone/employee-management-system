@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css?family=PT+Sans");
+
+.homeWrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  background: #000;
+  z-index: 1;
+  animation: fadeOutAndHide 1s forwards;
+  opacity: 1;
+}
+
+@keyframes fadeOutAndHide {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    display: hidden;
+  }
+}
+
+.webDesc {
+  display: grid;
+  position: absolute;
+  background: transparent;
+  top: 53.5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 321px;
+  height: 321px;
+  border-radius: 321px;
+  justify-items: center;
+  align-items: center;
+  transition: all 0.5s;
+  transform-origin: center;
+  z-index: 2;
+}
+
+.webDesc:hover {
+  cursor: pointer;
+}
+
+.webDesc:hover > h3 {
+  display: none;
+  animation: toFadeIn 1s backwards;
+}
+
+.webDesc > h3 {
+  color: rgba(141, 141, 140, 0.9);
+  margin-top: 2rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.2rem;
+  text-align: center;
+  font-weight: 300;
+  line-height: 1.5rem;
+  opacity: 0;
+  transition: 2s;
+  animation: toFadeIn 3s forwards;
+  text-shadow: 2px 2px 2px rgba(255, 255, 255, 0.5);
+}
+
+.webDesc:hover ~ .descText {
+  transition: 1s;
+  transform: translate(-50%, -50%) scale(1);
+  animation: toFadeIn 2s forwards;
+}
+
+.webDesc:hover ~ .descText:after {
+  animation: 1s toFadeIn forwards;
+}
+
+.descText {
+  width: 30rem;
+  height: 5rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: center;
+  transform: translate(-50%, -40%) scale(0.8);
+  opacity: 0;
+}
+
+.descText > h4 {
+  text-align: center;
+  font-size: 4rem;
+  color: #fff;
+  margin: 1rem 0;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+.descText:after {
+  position: absolute;
+  content: "";
+  width: 190vw;
+  height: 90vh;
+  background: rgb(0, 0, 0, 0.6);
+  top: -40vh;
+  left: -40vw;
+  z-index: -1;
+  opacity: 0;
+}
+
+.descText > p {
+  color: #000;
+  font-size: 0.6rem;
+  background: #ddd;
+  padding: 1rem;
+  text-shadow: 1px 1px 1px rgba(256, 256, 256, 0.3);
+  font-weight: 400;
+  letter-spacing: 0.12rem;
+  text-align: center;
+}
+
+@media screen and (max-width: 540px) {
+  .descText {
+    display: grid;
+    justify-items: center;
+  }
+  .descText > h4 {
+    font-size: 3rem;
+  }
+  .descText > p {
+    width: 18rem;
+  }
+}

@@ -1,0 +1,21 @@
+.footerWrapper {
+  margin: 0;
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  height: 0.2em;
+  padding: 0.5em;
+  background: #000;
+  opacity: 0.75;
+  display: grid;
+  z-index: 1000;
+}
+.footerWrapper > h4 {
+  position: absolute;
+  left: 49%;
+  top: 50%;
+  transform: translate(-50%, -40%);
+  color: #fff;
+  font-size: 0.4em;
+  letter-spacing: 0.4em;
+}

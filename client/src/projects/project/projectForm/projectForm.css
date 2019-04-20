@@ -1,0 +1,286 @@
+.projectFormWrapper {
+  display: grid;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  background: rgba(7, 5, 5, 0.95);
+  z-index: 999;
+  opacity: 0.99;
+
+  box-shadow: 0 0 0 0.2rem rgba(7, 5, 5, 0.95);
+  border: 0.1rem solid rgba(256, 256, 256, 0.7);
+  border-radius: 0.2rem;
+  width: 60.5vw;
+  height: 60.5vh;
+
+  grid-template-columns: 20.2vw 40.2vw;
+  grid-template-rows: 10vh 40vh 10vh;
+
+  grid-template-areas:
+    "a b"
+    "c b"
+    "d b";
+}
+
+.projectFormLeft {
+  display: grid;
+  grid-area: c;
+  grid-template-columns: 20.2vw;
+  grid-template-rows: 10vh 20vh 10vh;
+  grid-template-areas:
+    "e"
+    "f"
+    "g";
+}
+
+.projectFormLeft > h2 {
+  grid-area: f;
+  justify-self: center;
+  align-self: center;
+  font-size: 1.3rem;
+  color: #fff;
+  padding: 0.5rem;
+}
+
+.projectFormLeft > p {
+  color: rgba(29, 184, 94, 0.65);
+  font-size: 0.5rem;
+  grid-area: g;
+  justify-self: center;
+  align-self: start;
+  text-align: center;
+}
+
+.projectFormRight {
+  display: grid;
+  grid-area: b;
+  grid-template-columns: 40.2vw;
+  grid-template-rows: 12vh 36vh 12vh;
+  grid-template-areas:
+    "h"
+    "i"
+    "j";
+}
+
+#editProjectDescription {
+  grid-area: i;
+  align-self: center;
+}
+
+.renameProject {
+  display: grid;
+  grid-area: h;
+  align-self: end;
+  width: 4rem;
+}
+
+.projectFormRight label {
+  color: #fff;
+  padding: 0.2rem;
+  font-size: 0.5rem;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+}
+
+.error {
+  color: red;
+}
+
+.defaultInput {
+  color: rgb(189, 188, 188);
+  display: block;
+  margin: 0.2rem;
+  outline: 0;
+  border: none;
+  background: transparent;
+  border-bottom: 0.2px solid rgba(256, 256, 256, 0.7);
+}
+
+.errorInput {
+  color: rgb(189, 188, 188);
+  display: block;
+  margin: 0.2rem;
+  outline: 0;
+  border: none;
+  background: transparent;
+  border-bottom: 0.2px solid rgba(236, 236, 236, 0.75);
+}
+
+.defaultTextarea {
+  display: grid;
+  width: 38vw;
+  height: 25vh;
+  max-width: 38vw;
+  max-height: 25vh;
+  color: rgb(189, 188, 188);
+  outline: 0;
+  border: none;
+  background: transparent;
+  border-bottom: 0.2px solid rgba(236, 236, 236, 0.75);
+}
+
+.projectBottomArea {
+  grid-area: j;
+  display: grid;
+  align-self: start;
+  grid-template-columns: 15vw 15vw 10vw;
+  grid-template-rows: 15vh;
+  grid-template-areas: "k l m";
+}
+
+.ProjectStartDate {
+  grid-area: k;
+  width: 12vw;
+  align-self: start;
+}
+
+.ProjectEndDate {
+  grid-area: l;
+  width: 12vw;
+
+  align-self: start;
+}
+
+#projectSubmitButton {
+  grid-area: m;
+  margin: 0.8rem 0 0 0;
+  align-self: start;
+  width: 90%;
+  justify-self: start;
+}
+
+@media screen and (max-width: 1080px) {
+  .projectFormWrapper {
+    display: grid;
+    width: 60.5vw;
+    height: 60.5vh;
+    grid-template-columns: 60.5vw;
+    grid-template-rows: 8vh 52.5vh;
+    grid-template-areas:
+      "a"
+      "b";
+  }
+  .projectFormLeft {
+    grid-area: a;
+    display: grid;
+    width: 60.5vw;
+    height: 10vh;
+    grid-template-columns: 60.5vw;
+    grid-template-rows: 5vh 2vh;
+    grid-template-areas:
+      "c"
+      "d";
+    box-sizing: border-box;
+  }
+  .projectFormLeft > h2 {
+    grid-area: c;
+  }
+  .projectFormLeft > p {
+    grid-area: d;
+  }
+  .projectFormRight {
+    display: grid;
+
+    box-sizing: border-box;
+    padding: 0.5rem;
+    grid-template-columns: 58vw;
+    grid-template-rows: 10vh 25.5vh 15vh;
+    grid-template-areas:
+      "e"
+      "f"
+      "g";
+  }
+  .renameProject {
+    grid-area: e;
+    width: 20vw;
+    align-self: center;
+  }
+  #editProjectDescription {
+    grid-area: f;
+    align-self: start;
+    width: 56.5vw;
+
+    box-sizing: border-box;
+  }
+  .ProjectStartDate {
+    margin: 1.2rem 0 0 0;
+    width: 5rem;
+    align-self: start;
+    justify-self: center;
+  }
+  .ProjectEndDate {
+    margin: 1.2rem 0 0 0;
+    width: 5rem;
+    align-self: center;
+    align-self: start;
+    justify-self: center;
+  }
+  .defaultTextarea {
+    display: grid;
+    width: 56.5vw;
+    height: 20.5vh;
+    max-height: 20.5vh;
+    max-width: 56.5vw;
+    box-sizing: border-box;
+    justify-self: center;
+  }
+  .projectBottomArea {
+    grid-area: g;
+    align-self: center;
+    grid-template-columns: 20vw 20vw 20vw;
+    grid-template-rows: 15vh;
+    box-sizing: border-box;
+  }
+  #projectSubmitButton {
+    margin: 2rem 0 0 0;
+    align-self: start;
+    width: 8rem;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .projectBottomArea {
+    grid-area: g;
+    align-self: center;
+    grid-template-columns: 30vw 30vw;
+    grid-template-rows: 8vh 7vh;
+    grid-template-areas:
+      "xx yy"
+      "zz zz";
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  label.renameProject {
+    width: 7rem;
+  }
+
+  .projectFormLeft > h2 {
+    font-size: 0.9rem;
+  }
+  .ProjectStartDate {
+    grid-area: xx;
+    align-self: center;
+  }
+
+  .projectBottomArea .defaultInput {
+    width: 5rem;
+  }
+
+  .projectBottomArea .errorInput {
+    width: 5rem;
+  }
+
+  .ProjectEndDate {
+    grid-area: yy;
+    align-self: center;
+  }
+  #projectSubmitButton {
+    margin: 0 0.65rem 0 0;
+    align-self: center;
+    justify-self: center;
+    grid-area: zz;
+  }
+}

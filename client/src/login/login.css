@@ -1,0 +1,116 @@
+.loginWrapper {
+  display: grid;
+  position: absolute;
+  left: 50%;
+  top: 55%;
+  transform: translate(-50%, -50%);
+  width: 30vw;
+  height: 65vh;
+  background: #000;
+  border-radius: 3px;
+  opacity: 0;
+  animation: toFadeIn 1s forwards;
+  border: 2px solid #fff;
+  outline: 3px solid #000;
+  z-index: 200;
+  grid-template-columns: 30vw;
+  grid-template-rows: 15vh 50vh;
+  grid-template-areas:
+    "a"
+    "b";
+}
+.loginWrapper > h2 {
+  grid-area: a;
+  padding: 2rem 0;
+  position: absolute;
+  display: grid;
+  justify-self: center;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.loginWrapper > form {
+  display: grid;
+  grid-area: b;
+  justify-self: center;
+  align-self: center;
+  height: 40vh;
+}
+
+.loginWrapper > form > input {
+  display: grid;
+  justify-self: center;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+
+  height: 15px;
+
+  padding: 0.55rem;
+}
+
+.loginWrapper > form > input:focus {
+  border-color: #000;
+  box-shadow: 0 1px 1px #fff inset, 0 0 8px rgba(68, 58, 58, 0.6);
+  outline: 0px;
+  background: #ccc;
+}
+
+.loginWrapper button {
+  display: grid;
+  justify-self: center;
+  letter-spacing: 0.3em;
+  height: 2rem;
+  outline: none;
+  width: 6rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: #fff;
+  text-transform: uppercase;
+
+  opacity: 0.8;
+  margin-top: 2rem;
+}
+
+.loginWrapper button:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+form > label {
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 0.4em;
+  color: #fff;
+}
+
+.loginError {
+  justify-self: center;
+  color: red;
+}
+
+@media screen and (max-width: 768px) {
+  .loginWrapper {
+    width: 40vw;
+    height: 65vh;
+    display: grid;
+    grid-template-columns: 40vw;
+    grid-template-rows: 15vh 50vh;
+    grid-template-areas:
+      "a"
+      "b";
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .loginWrapper {
+    width: 60vw;
+    height: 65vh;
+    display: grid;
+    grid-template-columns: 60vw;
+    grid-template-rows: 15vh 50vh;
+    grid-template-areas:
+      "a"
+      "b";
+  }
+}

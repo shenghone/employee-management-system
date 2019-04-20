@@ -1,0 +1,41 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+
+body,
+* {
+  border: 0;
+  margin: 0;
+}
+
+body {
+  animation: toHide 2s forwards;
+}
+
+.darkApp {
+  background: #000;
+}
+
+.brightApp {
+  background: #cecece;
+}
+
+.App {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  transition: all 1s forwards;
+}
+
+.ohyeah {
+  position: absolute;
+  top: 15%;
+  left: 10%;
+  font-size: 1.8vw;
+  letter-spacing: 0.1rem;
+  z-index: 998;
+}
+
+.ohyeah:hover {
+  opacity: 0.6;
+}

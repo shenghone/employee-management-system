@@ -1,0 +1,236 @@
+.teamWrapper {
+  display: grid;
+  grid-template-columns: 20vw 50vw;
+  grid-template-rows: 70vh;
+  grid-template-areas: "a b";
+  color: #fff;
+  top: 50%;
+  left: 50%;
+  z-index: 999;
+  transform: translate(-50%, -50%);
+  width: 70vw;
+  height: 70vh;
+  background: rgba(0, 0, 0, 0.85);
+  border-radius: 0.2rem;
+  box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.85);
+  border: 0.1rem solid rgba(256, 256, 256, 0.7);
+  position: absolute;
+}
+
+.teamInfoLeft {
+  display: grid;
+  grid-area: a;
+  grid-template-rows: 5vh 30vh 35vh;
+  grid-template-columns: 20vw;
+  grid-template-areas:
+    "c"
+    "d"
+    "e";
+}
+
+.teamName {
+  grid-area: d;
+  align-self: end;
+  justify-self: center;
+  display: grid;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 3rem;
+  letter-spacing: 0.2rem;
+  text-shadow: 0.1rem 0.2rem 1rem rgba(256, 256, 256, 0.4);
+  text-align: center;
+}
+
+.teamInfoBottom {
+  display: grid;
+  grid-area: e;
+  grid-template-rows: 10vh 10vh 10vh;
+  grid-template-columns: 20vw;
+  grid-template-areas:
+    "f"
+    "g"
+    "h";
+}
+
+.teamId {
+  grid-area: f;
+  align-self: end;
+  padding: 0.4rem 0;
+  justify-self: center;
+  color: rgba(29, 184, 94, 0.65);
+  font-size: 0.5rem;
+}
+
+#editTeamButton {
+  align-self: start;
+  grid-area: g;
+  justify-self: center;
+}
+
+.teamInfoRight {
+  display: grid;
+  grid-area: b;
+  grid-template-columns: 50vw;
+  grid-template-rows: 12vh 50vh 8vh;
+  grid-template-areas:
+    "i"
+    "j"
+    "k";
+  color: #fff;
+  text-shadow: 0.1rem 0.2rem 0.1rem rgba(0, 0, 0, 0.4);
+  letter-spacing: 0.04rem;
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+
+.teamInfoBody {
+  grid-area: j;
+  grid-template-columns: 50vw;
+  grid-template-rows: 10vh 15vh 25vh;
+  grid-template-areas:
+    "l"
+    "m"
+    "n";
+  display: grid;
+}
+
+.teamLead {
+  grid-area: l;
+  line-height: 1.4rem;
+}
+
+.teamLead > p {
+  padding: 0 0 0 0.2rem;
+}
+
+.teamLabel {
+  color: rgb(148, 148, 148);
+  letter-spacing: 0.03rem;
+  text-transform: uppercase;
+}
+
+.tempProjects {
+  height: 14vh;
+  overflow-y: scroll;
+  grid-area: m;
+  line-height: 1.4rem;
+}
+.tempProjects > label {
+  display: block;
+}
+
+.tempProjects > p {
+  padding: 0 0 0 0.2rem;
+  display: inline-block;
+}
+.teamEmployees {
+  line-height: 1.4rem;
+  grid-area: n;
+  width: 48vw;
+  height: 24vh;
+  overflow-y: scroll;
+  text-align: justify;
+  align-self: center;
+}
+
+.teamEmployees p {
+  padding: 0 0 0 0.2rem;
+  display: inline-block;
+  line-height: 1.4rem;
+}
+
+.teamEmployees label {
+  display: block;
+  margin: 0.5rem 0 0 0;
+}
+
+@media screen and (max-width: 786px) {
+  .teamWrapper {
+    width: 70vw;
+    height: 70vh;
+    grid-template-rows: 15vh 55vh;
+    grid-template-columns: 70vw;
+    grid-template-areas:
+      "a"
+      "b";
+  }
+  .teamInfoLeft {
+    grid-area: a;
+    grid-template-rows: 6vh 9vh;
+    grid-template-columns: 70vw;
+    grid-template-areas:
+      "c"
+      "d";
+  }
+  .teamName {
+    grid-area: c;
+    align-self: center;
+  }
+  .teamInfoBottom {
+    grid-area: d;
+    width: 70vw;
+    justify-self: center;
+    grid-template-rows: 3vh 4vh;
+    grid-template-columns: 70vw;
+    grid-template-areas:
+      "cc"
+      "dd";
+  }
+  .teamId {
+    grid-area: cc;
+  }
+  #editTeamButton {
+    grid-area: dd;
+  }
+
+  .teamInfoRight {
+    grid-area: b;
+    grid-template-rows: 55vh;
+    grid-template-columns: 70vw;
+    grid-template-areas: "bb";
+  }
+  .teamInfoBody {
+    grid-area: bb;
+    grid-template-rows: 5vh 15vh 35vh;
+    grid-template-columns: 70vw;
+    grid-template-areas:
+      "e"
+      "f"
+      "g";
+  }
+  .teamLead {
+    display: grid;
+    grid-area: e;
+    height: 5vh;
+    align-self: center;
+    padding: 1rem;
+  }
+  .tempProjects {
+    grid-area: f;
+    height: 15vh;
+    width: 70vw;
+    overflow-y: scroll;
+    margin: 1rem 0;
+    padding: 1rem;
+    box-sizing: border-box;
+  }
+
+  .teamEmployees {
+    align-self: start;
+    grid-area: g;
+    height: 30vh;
+    width: 70vw;
+    overflow-y: scroll;
+    margin: 1rem 0;
+    padding: 1rem;
+    box-sizing: border-box;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .teamName {
+    font-size: 0.9rem;
+    align-self: center;
+  }
+
+}

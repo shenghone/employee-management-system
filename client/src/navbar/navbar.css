@@ -1,0 +1,160 @@
+.navbarWrapper {
+  position: absolute;
+  top: 9%;
+  left: 10%;
+  z-index: 1000;
+  opacity: 0;
+  animation: toFadeIn 2s forwards;
+}
+
+div.clicked ~ ul {
+  display: block;
+}
+
+.burger + ul {
+  display: none;
+}
+
+.burger {
+  position: absolute;
+  width: 2rem;
+  height: 2rem;
+  display: grid;
+}
+
+.burger:hover {
+  cursor: pointer;
+}
+
+.burger > span {
+  display: grid;
+  align-self: center;
+  justify-self: center;
+  border-radius: 3px;
+}
+
+.clicked .line {
+  background: rgba(180, 16, 16, 0.86);
+}
+
+.line {
+  align-self: center;
+  position: absolute;
+  width: 15px;
+  height: 2px;
+  background: #fff;
+  transition: all 0.8s cubic-bezier(0.17, 0.67, 0.81, 1.25);
+}
+
+.clicked .line1 {
+  top: 0.6rem;
+  transform: rotate(45deg);
+}
+
+.clicked .line3 {
+  opacity: 0;
+}
+
+.clicked .line2 {
+  top: 0.6rem;
+  transform: rotate(-225deg);
+}
+
+.line1 {
+  top: 0.3rem;
+}
+.line2 {
+  top: 0.65rem;
+}
+.line3 {
+  top: 1rem;
+}
+
+.NavClass {
+  text-decoration: none;
+  display: inline-block;
+  margin: 0 0.5em;
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-bottom: solid transparent;
+  align-self: center;
+}
+
+.whiteNav {
+  color: #fff;
+}
+
+.darkNav {
+  color: #000;
+}
+
+.NavClass:hover {
+  animation: 2s anim 0.2s ease-in-out infinite;
+  border-bottom: solid rgba(131, 185, 155, 0);
+  opacity: 0.8;
+}
+
+.activeClass {
+  animation: 6s anim 1s ease-in-out infinite;
+  border-bottom: solid rgba(173, 164, 164, 0);
+}
+
+@keyframes anim {
+  0% {
+    border-bottom: solid rgba(184, 30, 30, 1);
+  }
+  100% {
+    border-bottom: solid rgba(173, 164, 164, 0.8);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .line {
+    width: 17px;
+    height: 2px;
+  }
+
+  .burger {
+    z-index: 999;
+  }
+
+  .clicked ~ ul:after {
+    content: "";
+    position: absolute;
+    top: -20vh;
+    left: -10vw;
+    height: 120vh;
+    width: 110vw;
+    opacity: 0;
+    background: rgba(0, 0, 0, 0.85);
+    animation: toFadeIn 1s forwards;
+    z-index: -1;
+  }
+
+  .clicked ~ ul {
+    padding: 0 0 0 34vw;
+  }
+
+  .clicked ~ ul > .NavClass {
+    color: #fff;
+    display: block;
+    margin: 4rem 0;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .clicked ~ ul:after {
+    content: "";
+    position: absolute;
+    top: -20vh;
+    left: -10vw;
+    height: 120vh;
+    width: 150vw;
+    opacity: 0;
+    background: rgba(0, 0, 0, 0.7);
+    animation: toFadeIn 1s forwards;
+    z-index: -1;
+  }
+}

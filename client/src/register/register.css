@@ -1,0 +1,244 @@
+.registerWrapper {
+  display: grid;
+  grid-template-columns: 20vw 55vw;
+  grid-template-rows: 65vh;
+  width: 75vw;
+  height: 65vh;
+  grid-template-areas: "a b";
+  top: 55%;
+  left: 50%;
+  color: #fff;
+  z-index: 999;
+  position: absolute;
+  transform: translate(-50%, -50%);
+
+  background: rgba(34, 34, 34, 0.9);
+  border-radius: 0.2rem;
+  box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.85);
+  border: 0.1rem solid rgba(256, 256, 256, 0.7);
+  opacity: 0;
+  animation: toFadeIn 1s forwards;
+}
+
+.registerLeft {
+  box-sizing: border-box;
+  grid-area: a;
+  align-self: center;
+  justify-self: center;
+  font-size: 0.6rem;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+}
+
+.newEmployeeForm {
+  display: absolute;
+  align-self: center;
+  display: grid;
+  box-sizing: border-box;
+  grid-area: b;
+  margin: 2rem 1rem;
+  grid-template-columns: 17vw 17vw 17vw;
+  grid-template-rows: repeat(5, 12vh);
+  align-items: center;
+  grid-template-areas:
+    "c d e"
+    "f g h"
+    "i j k"
+    "l m n"
+    "o p q";
+}
+
+#employeeFirstName {
+  grid-area: c;
+}
+#employeeLastName {
+  grid-area: d;
+}
+#employeeEmail {
+  grid-area: e;
+}
+
+#employeePassword {
+  grid-area: f;
+}
+
+#employeeUsername {
+  grid-area: g;
+}
+#employeePosition {
+  grid-area: h;
+}
+#employeeAddressCity {
+  grid-area: j;
+}
+#employeeAddressStreet {
+  grid-area: i;
+}
+
+#employeeHireDate {
+  grid-area: l;
+}
+
+#employeeAddressState {
+  grid-area: m;
+}
+#employeeAddressZip {
+  grid-area: k;
+}
+#employeePhoneNum {
+  grid-area: n;
+}
+
+#employeeExtension {
+  grid-area: o;
+}
+#optional {
+  grid-area: p;
+  margin: 0 0 0 1.5rem;
+}
+
+#newEmployeeButton {
+  grid-area: q;
+  justify-self: start;
+  width: 8rem;
+}
+
+/*ul*/
+.employeePositions {
+  position: absolute;
+  display: block;
+  margin: 0;
+  padding: 0;
+  background: rgb(34, 34, 34);
+  width: 12rem;
+}
+
+.employeePositionList {
+  position: relative;
+  display: none;
+  animation: toFadeIn 1s forwards;
+  padding: 0.5rem 0.5rem;
+  font-size: 0.6rem;
+}
+
+.employeePositionList:hover {
+  cursor: pointer;
+  opacity: 0.85;
+}
+.employeePositionList:hover::after {
+  content: "";
+  position: absolute;
+  width: 12rem;
+  height: 2rem;
+  background: #cecece;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+/*label*/
+#employeePosition:hover .employeePositionList {
+  display: inline-block;
+}
+
+.newEmployeeInput {
+  color: rgb(189, 188, 188);
+  display: block;
+
+  outline: 0;
+  border: none;
+  background: transparent;
+  border-bottom: 0.2px solid rgba(256, 256, 256, 0.7);
+}
+
+.newEmployeeForm label {
+  color: #fff;
+  padding: 0.2rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+}
+
+.newEmployeeForm > .error {
+  font-size: 0.7rem;
+  padding: 0;
+  margin: 0;
+}
+
+.newEmployeeForm input.errorInput {
+  background: transparent;
+}
+
+@media screen and (max-width: 900px) {
+  .registerWrapper {
+    width: 75vw;
+    height: 65vh;
+    grid-template-columns: 75vw;
+    grid-template-rows: 10vh 55vh;
+    grid-template-areas:
+      "a"
+      "b";
+  }
+  .registerLeft {
+    grid-area: a;
+  }
+  .newEmployeeForm {
+    justify-self: center;
+    justify-items: center;
+    grid-area: b;
+    margin: 0.5rem 1.5rem;
+    grid-template-columns: repeat(3, 24vw);
+  }
+  #newEmployeeButton {
+    justify-self: center;
+  }
+  #optional {
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .registerWrapper {
+    width: 80vw;
+    height: 65vh;
+    grid-template-columns: 80vw;
+    grid-template-rows: 10vh 55vh;
+    grid-template-areas:
+      "a"
+      "b";
+  }
+
+  .newEmployeeForm label {
+    width: 8rem;
+  }
+  .newEmployeeForm input.errorInput {
+    width: 8rem;
+  }
+
+  .newEmployeeForm {
+    justify-self: center;
+    justify-items: center;
+    align-items: start;
+    grid-area: b;
+    margin: 0rem 1.5rem;
+    height: 55vh;
+    grid-template-columns: repeat(2, 37vw);
+    grid-template-rows: repeat(8, 15vh);
+    overflow-y: scroll;
+    grid-template-areas:
+      "c d"
+      "e f"
+      "g h"
+      "i j"
+      "k l"
+      "m n "
+      "o p"
+      "q r";
+  }
+  #optional {
+    grid-area: q;
+  }
+  #newEmployeeButton {
+    grid-area: r;
+  }
+}

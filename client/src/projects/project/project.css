@@ -1,0 +1,211 @@
+.projectWrapper {
+  display: grid;
+  grid-template-columns: 15vw 45vw;
+  grid-template-rows: 15vh 30vh 15vh;
+  grid-template-areas:
+    "a b"
+    "c b"
+    "d b";
+  top: 50%;
+  left: 50%;
+  color: #fff;
+  z-index: 999;
+  transform: translate(-50%, -50%);
+  width: 60vw;
+  height: 60vh;
+  background: rgba(0, 0, 0, 0.85);
+  border-radius: 0.2rem;
+  box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.85);
+  border: 0.1rem solid rgba(256, 256, 256, 0.7);
+  position: absolute;
+}
+
+.projectLeft {
+  display: grid;
+  grid-area: c;
+  align-self: center;
+  justify-self: center;
+  grid-template-rows: 10vh 10vh 10vh;
+  grid-template-columns: 15vw;
+  grid-template-areas:
+    "g"
+    "h"
+    "i";
+}
+#projectEditButton {
+  display: grid;
+  grid-area: i;
+  align-self: end;
+  justify-self: center;
+  margin: 0 0 0 2rem;
+}
+
+.projectLeft > h2 {
+  align-self: center;
+  justify-self: center;
+  display: grid;
+  grid-area: h;
+  color: rgb(255, 255, 255);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 3rem;
+  letter-spacing: 0.2rem;
+  padding: 0 0 0 2rem;
+  text-shadow: 0.1rem 0.2rem 1rem rgba(256, 256, 256, 0.4);
+  text-align: center;
+}
+
+.projectRight {
+  grid-area: b;
+  color: #fff;
+  display: grid;
+  text-shadow: 0.1rem 0.2rem 0.1rem rgba(0, 0, 0, 0.4);
+
+  letter-spacing: 0.04rem;
+
+  font-size: 0.7rem;
+  font-weight: 400;
+  grid-template-rows: 10vh 30vh 20vh;
+  text-align: justify;
+  grid-template-areas:
+    "j"
+    "k"
+    "l";
+  line-height: 1.4rem;
+}
+
+.projectDescription {
+  grid-area: k;
+  padding: 2rem;
+  align-self: center;
+  justify-self: center;
+  height: 19vh;
+  overflow-y: scroll;
+}
+
+.projectDate {
+  display: grid;
+  grid-area: l;
+  grid-template-rows: 10vh;
+  grid-template-columns: 15vw 15vw 10vw;
+  grid-template-areas: "m n o";
+}
+
+.projectStartDate {
+  display: grid;
+  grid-area: m;
+  padding: 2rem;
+  align-self: start;
+  justify-self: start;
+}
+
+.projectEndDate {
+  display: grid;
+  grid-area: n;
+  padding: 2rem;
+  align-self: start;
+  justify-self: start;
+}
+
+.projectLabel {
+  color: rgb(148, 148, 148);
+  letter-spacing: 0.03rem;
+}
+
+@media screen and (max-width: 900px) {
+  .projectWrapper {
+    display: grid;
+    grid-template-columns: 60vw;
+    grid-template-rows: 14vh 46vh;
+    grid-template-areas:
+      "a"
+      "b";
+  }
+  .projectLeft {
+    grid-area: a;
+    grid-template-columns: 60vw;
+    grid-template-rows: 8vh 3vh;
+    grid-template-areas:
+      "c"
+      "d";
+  }
+  .projectBottomArea {
+    display: grid;
+  }
+
+  .projectLeft > h2 {
+    grid-area: c;
+    padding: 0;
+  }
+
+  #projectEditButton {
+    display: grid;
+    align-self: start;
+    grid-area: d;
+    margin: 0;
+  }
+  .projectRight {
+    grid-area: b;
+    grid-template-columns: 60vw;
+    grid-template-rows: 30vh 16vh;
+    grid-template-areas:
+      "e"
+      "f";
+  }
+  .projectDescription {
+    grid-area: e;
+  }
+  .projectDate {
+    grid-area: f;
+    grid-template-columns: 29vw 29vw;
+    grid-template-rows: 16vh;
+    grid-template-areas: "g h";
+    padding: 15px 0 0 0;
+    font-size: 8px;
+    box-sizing: border-box;
+  }
+  .projectStartDate {
+    display: grid;
+    grid-area: g;
+    align-self: start;
+    justify-self: center;
+  }
+  .projectEndDate {
+    display: grid;
+    grid-area: h;
+    align-self: start;
+    justify-self: center;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .projectRight {
+    text-shadow: none;
+  }
+  .projectLeft > h2 {
+    font-size: 0.8rem;
+    line-height: 1.4rem;
+  }
+
+  .projectDate {
+    padding: 0;
+  }
+  .projectDescription {
+    font-size: 10px;
+    line-height: 1rem;
+  }
+
+  .projectStartDate {
+    padding: 0 0 0 1rem;
+    align-self: center;
+  }
+
+  .projectEndDate {
+    padding: 0 1rem;
+    align-self: center;
+  }
+
+  .projectLabel {
+    font-size: 10px;
+  }
+}

@@ -1,0 +1,167 @@
+.newProjectFormWrapper {
+  display: grid;
+  grid-template-columns: 25vw 40vw;
+  grid-template-rows: 65vh;
+  grid-template-areas: "a b";
+  top: 50%;
+  left: 50%;
+  color: #fff;
+  z-index: 999;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  width: 65vw;
+  height: 65vh;
+  background: rgba(34, 34, 34, 0.95);
+  border-radius: 0.2rem;
+  box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.85);
+  border: 0.1rem solid rgba(256, 256, 256, 0.7);
+}
+
+.newProjectFormLeft {
+  grid-area: a;
+  display: grid;
+}
+
+.newProjectFormLeft > h2 {
+  justify-self: center;
+  align-self: center;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  letter-spacing: 0.04rem;
+}
+
+.newProjectFormRight {
+  grid-area: b;
+  grid-template-columns: 40vw;
+  grid-template-rows: 10vh 45vh 10vh;
+  display: grid;
+  grid-template-areas:
+    "c"
+    "d"
+    "e";
+}
+
+.newProjectForm {
+  grid-area: d;
+  grid-template-columns: 40vw;
+  grid-template-rows: 13vh 19vh 13vh;
+  display: grid;
+  grid-template-areas:
+    "f"
+    "g"
+    "h";
+}
+
+.newProjectName {
+  grid-area: f;
+  align-self: center;
+  justify-self: start;
+}
+
+#newProjectFormTextarea {
+  max-width: 35vw;
+  max-height: 19vh;
+  width: 35vw;
+  height: 19vh;
+}
+
+.newProjectForm label {
+  color: #fff;
+  padding: 0.2rem;
+  font-size: 0.5rem;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+}
+
+.newProjectDescription {
+  grid-area: g;
+  align-self: center;
+  justify-self: start;
+}
+
+.newProjectBottom {
+  grid-area: h;
+  grid-template-columns: 13vw 13vw 12vw;
+  grid-template-rows: 13vh;
+  grid-template-areas: "i j k";
+
+  display: grid;
+}
+
+#newProjectSubmitButton {
+  grid-area: k;
+  align-self: end;
+  justify-self: center;
+  margin: 0 0 0.4rem 0;
+}
+
+.newProjectStartDate {
+  grid-area: i;
+  align-self: end;
+  justify-self: start;
+}
+
+@media screen and (max-width: 768px) {
+  .newProjectFormWrapper {
+    display: grid;
+    grid-template-columns: 65vw;
+    grid-template-rows: 8vh 57vh;
+    grid-template-areas:
+      "a"
+      "b";
+    width: 65vw;
+    height: 65vh;
+  }
+  .newProjectFormLeft {
+    grid-area: a;
+  }
+  .newProjectFormRight {
+    grid-area: b;
+    grid-template-columns: 65vw;
+    grid-template-rows: 57vh;
+    grid-template-areas: "c";
+  }
+
+  .newProjectForm {
+    grid-area: c;
+    grid-template-columns: 65vw;
+    grid-template-rows: 10vh 30vh 17vh;
+
+    grid-template-areas:
+      "d"
+      "e"
+      "f";
+  }
+  .newProjectName {
+    grid-area: d;
+    margin: 2rem;
+  }
+
+  .newProjectDescription {
+    grid-area: e;
+    margin: 2rem;
+  }
+
+  #newProjectFormTextarea {
+    width: 55vw;
+    max-width: 55vw;
+  }
+
+  .newProjectBottom {
+    grid-area: f;
+    grid-template-columns: 32.5vw 32.5vw;
+    grid-template-rows: 17vh;
+    grid-template-areas: "g h";
+  }
+  .newProjectStartDate {
+    align-self: center;
+    margin: 2rem;
+    grid-area: g;
+  }
+  #newProjectSubmitButton {
+    align-self: center;
+    margin: 2rem;
+    grid-area: h;
+    width: 60%;
+  }
+}

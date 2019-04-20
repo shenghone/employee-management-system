@@ -1,0 +1,156 @@
+.tableWrapper {
+  grid-template-rows: repeat(10, 10vh);
+  grid-template-columns: repeat(10, 10vw);
+  display: grid;
+  animation: toFadeIn 1s forwards;
+}
+
+.outterWrapper {
+  display: grid;
+  grid-row: 4 / span 9;
+  grid-column: 2 / span 8;
+}
+
+.tableClass {
+  width: 100%;
+}
+
+.bodyRow,
+.headRow {
+  display: flex;
+}
+
+.bodyRow {
+  border-bottom: 1px solid rgba(177, 176, 176, 0.4);
+}
+
+.tableBody {
+  height: 58vh;
+  overflow-y: scroll;
+  background: rgb(219, 218, 218);
+}
+
+.tableHeader {
+  display: flex;
+  font-size: 0.6em;
+  background: #000;
+  color: #fff;
+  padding: 0.6rem 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5em;
+  align-items: center;
+  justify-content: center;
+}
+
+.tableHeader:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+#sorting-asc:after {
+  position: relative;
+  content: " (A-Z)";
+  color: #c4221c;
+  float: right;
+}
+
+#sorting-desc:after {
+  position: relative;
+  content: " (Z-A)";
+  color: #c4221c;
+  float: right;
+}
+
+#sortingDate-desc:after {
+  position: relative;
+  content: " ↓";
+  color: #c4221c;
+  float: right;
+  font-size: 0.4rem;
+}
+
+#sortingDate-asc:after {
+  position: relative;
+  content: " ↑";
+  color: #c4221c;
+  float: right;
+  font-size: 0.4rem;
+}
+
+.tableContent {
+  text-align: center;
+  font-size: 0.3em;
+  background: rgb(219, 218, 218);
+  color: #000;
+  padding: 1em;
+  letter-spacing: 0.2em;
+  align-self: center;
+  padding: 0.4rem 0.5rem;
+}
+
+.tableBody > tr:hover {
+  cursor: pointer;
+  background: #cecece;
+}
+
+.tableBody > tr:hover > td {
+  color: #c4221c;
+  opacity: 0.95;
+  background: #cecece;
+}
+
+.employeePosition {
+  width: 20%;
+}
+
+.employeeFullName {
+  width: 20%;
+}
+
+.employeeHireDate {
+  width: 20%;
+}
+
+.employeeAddress {
+  width: 40%;
+}
+
+.tableBody,
+.tableHead {
+  display: block;
+}
+
+.employeeSearchBar {
+  grid-row: 3 / span 1;
+  grid-column: 8 / span 2;
+  align-self: center;
+  justify-self: end;
+}
+
+@media screen and (max-width: 768px) {
+  .tableHeader {
+    font-size: 7px;
+    padding: 3px;
+    letter-spacing: 0.5px;
+  }
+  .tableContent {
+    font-size: 6.5px;
+    padding: 3px;
+    letter-spacing: 0.5px;
+    padding: 0.4rem 0.5rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .tableHeader {
+    font-size: 4px;
+    padding: 2px;
+    letter-spacing: 0.5px;
+  }
+  .tableContent {
+    font-size: 6.5px;
+    padding: 3px;
+    letter-spacing: 0.5px;
+    padding: 0.4rem 0.5rem;
+  }
+}

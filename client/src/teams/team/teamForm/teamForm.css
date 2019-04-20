@@ -1,0 +1,430 @@
+.editTeamWrapper {
+  display: grid;
+  grid-template-columns: 20vw 60vw;
+  grid-template-rows: 80vh;
+  grid-template-areas: "a b";
+  color: #fff;
+  top: 50%;
+  left: 50%;
+  z-index: 900;
+  transform: translate(-50%, -50%);
+  width: 80vw;
+  height: 80vh;
+  background: rgba(0, 0, 0, 0.95);
+  border-radius: 0.2rem;
+  box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.85);
+  border: 0.1rem solid rgba(256, 256, 256, 0.7);
+  position: absolute;
+  z-index: 999;
+}
+
+.editTeamLeft {
+  display: grid;
+  grid-area: a;
+  grid-template-rows: 25vh 30vh 25vh;
+  grid-template-columns: 20vw;
+  justify-items: center;
+  align-items: center;
+  grid-template-areas:
+    "x"
+    "y"
+    "z";
+}
+
+.editTeamLeftAreas {
+  display: grid;
+  grid-area: y;
+  grid-template-rows: 10vh 10vh 10vh;
+  grid-template-columns: 20vw;
+  grid-template-areas:
+    "xx"
+    "yy"
+    "zz";
+}
+
+.teamFormTeamName {
+  grid-area: yy;
+  font-size: 1.5rem;
+  align-self: start;
+  font-weight: 400;
+  line-height: 3rem;
+  letter-spacing: 0.2rem;
+  text-shadow: 0.1rem 0.2rem 1rem rgba(256, 256, 256, 0.4);
+  text-align: center;
+  padding: 0.5rem;
+}
+
+.teamFormTeamId {
+  grid-area: zz;
+  padding: 0.4rem 0;
+  justify-self: center;
+  color: rgba(29, 184, 94, 0.65);
+  font-size: 0.5rem;
+  align-self: end;
+  text-align: center;
+}
+
+.editTeamForm {
+  display: grid;
+  grid-area: b;
+  padding: 2rem 1rem;
+  grid-template-rows: 12vh 33vh 34vh;
+  grid-template-columns: 56vw;
+  grid-template-areas:
+    "c"
+    "d"
+    "e";
+}
+
+.editTeamForm label {
+  color: #fff;
+  padding: 0.2rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+}
+
+.editTeamFormTop {
+  display: grid;
+  grid-area: c;
+  grid-template-rows: 10vh;
+  grid-template-columns: 15vw 20vw 15vw;
+  grid-template-areas: "f g h";
+  align-items: center;
+}
+
+.renameTeam {
+  grid-area: f;
+}
+
+.teamSearchArea {
+  grid-area: g;
+  text-transform: uppercase;
+  border: 0.04rem solid #fff;
+  height: 1.5rem;
+  width: 20vw;
+  font-size: 0.6rem;
+  letter-spacing: 0.1em;
+  border-radius: 0.3em;
+  background: #000;
+  transition: 1s;
+  min-width: 228.44px;
+}
+
+.teamSearchArea:hover {
+  border: 0.04rem solid #000;
+}
+
+.teamSearchArea:hover > .teamSearchInput {
+  width: 94%;
+  visibility: visible;
+  opacity: 1;
+}
+
+.teamSearchInput {
+  height: 1.5rem;
+  width: 0;
+  color: #000;
+  border-radius: 0.2em;
+  float: left;
+  outline: none;
+  opacity: 0;
+  font-weight: 300;
+  padding: 0 0.5rem;
+  letter-spacing: 0.06rem;
+  visibility: hidden;
+  transition: 1s;
+}
+
+.teamSearchInput:focus {
+  width: 94%;
+  visibility: visible;
+  height: 100%;
+  opacity: 1;
+}
+.teamSearchInput:focus ~ .teamSearchButton {
+  color: #000;
+  transform: translateX(14.4rem) rotate(0deg);
+}
+
+.teamSearchInput:focus ~ .teamSearchText {
+  transform: translateX(10rem);
+  opacity: 0;
+  visibility: hidden;
+}
+
+.teamSearchArea:hover > .teamSearchButton {
+  color: #000;
+  transform: translateX(14.4rem) rotate(0deg);
+}
+
+.teamSearchArea:hover > .teamSearchText {
+  transform: translateX(10rem);
+  opacity: 0;
+  visibility: hidden;
+}
+
+.teamSearchButton {
+  display: grid;
+  position: absolute;
+  height: 1.5rem;
+  width: 1.5rem;
+  transform: translateX(5rem) rotate(-360deg);
+  background: transparent;
+  padding: 0.43rem;
+  outline: none;
+  color: #fff;
+  transition: 1.3s;
+}
+
+.teamSearchText {
+  color: #fff;
+  position: absolute;
+  display: grid;
+  padding: 0.45rem;
+  transform: translate(7rem);
+  transition: 1s;
+}
+
+#submitTeamFormButton {
+  top: 0.01rem;
+  grid-area: h;
+  display: grid;
+  justify-self: end;
+  width: 9rem;
+  height: 1.6rem;
+  border-radius: 0.2rem;
+  background: #000;
+  color: #fff;
+  padding: 0.45rem;
+  box-shadow: 0.5px 0.5px 0.1px 0.2px rgba(0, 0, 0, 0.4);
+  border: 0.04rem solid #fff;
+}
+#submitTeamFormButton:hover {
+  background: #fff;
+  color: #000;
+}
+
+.editTeamMembers {
+  align-self: start;
+}
+
+.editEmployeeTableBody {
+  height: 23vh;
+  overflow-y: auto;
+}
+
+.row {
+  display: flex;
+}
+
+.cell {
+  text-align: left;
+  width: 25%;
+  font-size: 0.6em;
+  background: #000;
+  color: rgb(219, 218, 218);
+  padding: 0.4em;
+  letter-spacing: 0.2em;
+}
+
+.editTeamForm .theader {
+  padding: 0.2rem;
+  width: 100%;
+  font-size: 0.4em;
+  background: rgb(255, 255, 255, 0.85);
+  color: #000;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.editEmployeeTableBody,
+.thead {
+  display: block;
+}
+
+.row:hover > .cell {
+  background: #cecece;
+  color: #c4221c;
+  cursor: pointer;
+}
+
+.theader:hover {
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+#empDesc:after {
+  position: relative;
+  content: "↓";
+  color: #c4221c;
+}
+
+#empAsc:after {
+  position: relative;
+  content: "↑";
+  color: #c4221c;
+}
+
+.editProjectTableBody {
+  display: block;
+  height: 20vh;
+  overflow-y: scroll;
+}
+
+.editProjectTableBody td {
+  width: 100%;
+}
+
+.projectErrorMessage {
+  width: 100%;
+}
+
+@media screen and (max-width: 1100px) {
+  .editTeamWrapper {
+    display: grid;
+    grid-template-columns: 80vw;
+    grid-template-rows: 10vh 70vh;
+    grid-template-areas:
+      "a "
+      "b";
+  }
+  .editTeamLeft {
+    grid-area: a;
+    grid-template-columns: 80vw;
+    grid-template-rows: 10vh;
+    grid-template-areas: "c";
+  }
+  .editTeamLeftAreas {
+    grid-area: c;
+    grid-template-columns: 80vw;
+    grid-template-rows: 7vh 3vh;
+    grid-template-areas:
+      "cc"
+      "dd";
+  }
+  .teamFormTeamName {
+    box-sizing: border-box;
+    grid-area: cc;
+  }
+  .teamFormTeamId {
+    font-size: 0.8rem;
+    padding: 0.5rem;
+    grid-area: dd;
+  }
+  .editTeamForm {
+    grid-area: b;
+    padding: 0;
+    grid-template-columns: 80vw;
+    grid-template-rows: 10vh 32vh 35vh;
+    grid-template-areas:
+      "e"
+      "f"
+      "g";
+  }
+
+  .editEmployeeTableBody {
+    height: 28vh;
+  }
+  .editTeamFormTop {
+    grid-area: e;
+    grid-template-columns: 19vw 32vw 27vw;
+    grid-template-rows: 10vh;
+    grid-template-areas: "h i j ";
+    margin: 0;
+    padding: 0;
+  }
+  .renameTeam {
+    grid-area: h;
+    margin: 1rem;
+  }
+  .teamSearchArea {
+    grid-area: i;
+    margin: 1rem;
+    justify-self: end;
+  }
+
+  #submitTeamFormButton {
+    grid-area: j;
+
+    justify-self: end;
+  }
+  .editTeamMembers {
+    grid-area: f;
+    margin: 0;
+  }
+  .editTeamMembers {
+    grid-area: f;
+    box-sizing: border-box;
+    margin: 1rem;
+  }
+  .editTeamProject {
+    grid-area: g;
+    box-sizing: border-box;
+    margin: 1rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .teamFormTeamName {
+    font-size: 1rem;
+  }
+  .editTeamFormTop {
+    grid-area: e;
+    grid-template-columns: 19vw 60vw;
+    grid-template-rows: 5vh 5vh;
+    grid-template-areas:
+      "h i "
+      "hh ii";
+  }
+  .renameTeam {
+    grid-area: hh;
+    margin: 1rem;
+    width: 18vw;
+  }
+  .teamSearchArea {
+    grid-area: i;
+    margin: 1rem;
+  }
+  #submitTeamFormButton {
+    grid-area: ii;
+    margin: 1rem;
+  }
+  .editTeamMembers {
+    align-self: start;
+  }
+
+  .editTeamForm {
+    grid-area: b;
+    padding: 0;
+    grid-template-columns: 80vw;
+    grid-template-rows: 10vh 32vh 32vh;
+    grid-template-areas:
+      "e"
+      "f"
+      "g";
+  }
+  .editTeamForm .theader {
+    font-size: 7.5px;
+  }
+  .editTeamForm .cell {
+    font-size: 7px;
+  }
+}
+
+@media screen and (max-width: 570px) {
+  .renameTeam {
+    width: 30vw;
+  }
+  .editTeamForm .theader {
+    font-size: 7px;
+  }
+  .editTeamForm .cell {
+    display: grid;
+    justify-content: start;
+    font-size: 5.5px;
+  }
+}

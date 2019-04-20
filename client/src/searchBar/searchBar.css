@@ -1,0 +1,85 @@
+.searchBarWrapper {
+  position: relative;
+  width: 100%;
+
+  text-transform: uppercase;
+  border: 0.04rem solid #000;
+  min-width: 200px;
+
+  letter-spacing: 0.1em;
+  border-radius: 0.3em;
+  box-shadow: 0.5px 0.5px 0.1px 0.2px rgba(0, 0, 0, 0.2);
+  height: 1.48rem;
+  font-size: 0.6rem;
+}
+
+.searchBarWrapper:hover > .searchInput {
+  width: 10rem;
+}
+
+.searchInput {
+  display: flex;
+  position: absolute;
+  background: transparent;
+  float: left;
+  width: 0vw;
+  letter-spacing: 0.1rem;
+  border-radius: 1.5rem;
+  color: #000;
+  margin: 0.25rem;
+  padding: 0 0.5rem;
+  outline: none;
+  transition: 1.3s;
+}
+
+.searchBarWrapper:hover > #searchText {
+  transform: translateX(5rem);
+  opacity: 0;
+  visibility: hidden;
+}
+
+#searchText {
+  position: absolute;
+  float: right;
+  padding: 0.4rem;
+  font-weight: 300;
+  letter-spacing: 0.2rem;
+  transform: translateX(7rem);
+  transition: 1s;
+}
+.searchBarWrapper:hover > .searchButton {
+  transform: translateX(0rem) rotate(0deg);
+}
+
+.searchButton {
+  padding: 0.45rem;
+  position: relative;
+  float: right;
+  background: transparent;
+  color: #000;
+  border: none;
+  display: grid;
+  outline: none;
+  transform: translateX(-10rem) rotate(-360deg);
+  transition: 1.3s;
+}
+
+.searchInput:focus {
+  width: 10rem;
+}
+
+.searchInput:focus ~ * {
+  transform: translateX(0rem) rotate(0deg);
+}
+.searchInput:focus ~ #searchText {
+  transform: translateX(5rem);
+  opacity: 0;
+  visibility: hidden;
+}
+
+@media screen and (max-width: 768px) {
+  .searchInput {
+    font-size: 0.5rem;
+    padding: 0.15rem;
+  }
+}

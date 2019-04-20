@@ -1,0 +1,302 @@
+.employeeFormWrapper {
+  position: absolute;
+  display: grid;
+  top: 50%;
+  left: 50%;
+  z-index: 999;
+  transform: translate(-50%, -50%);
+  background: rgba(7, 5, 5, 0.93);
+  opacity: 0.99;
+  box-shadow: 0 0 0 0.2rem rgba(7, 5, 5, 0.95);
+  border: 0.1rem solid rgba(256, 256, 256, 0.7);
+  border-radius: 0.2rem;
+  width: 60.5vw;
+  height: 60.5vh;
+  grid-template-columns: 20vw 40.5vw;
+  grid-template-rows: 60.6vh;
+  grid-template-areas: "a b";
+  align-self: center;
+  transition: 1s;
+}
+
+.employeeFormLeft {
+  display: grid;
+  grid-area: a;
+  grid-template-columns: 20vw;
+  grid-template-rows: 20.2vh 20.2vh 20.2vh;
+  grid-template-areas:
+    "c"
+    "d"
+    "e";
+}
+
+.employeeFormName {
+  display: grid;
+  grid-area: d;
+  color: #fff;
+  align-self: center;
+  justify-self: center;
+  text-align: center;
+  line-height: 2.4rem;
+}
+
+.id {
+  color: rgba(29, 184, 94, 0.65);
+  font-size: 0.6rem;
+  justify-self: center;
+  text-align: center;
+}
+
+.updateEmployeeFormRight {
+  display: grid;
+  grid-area: b;
+  grid-template-columns: 40.5vw;
+  grid-template-rows: 10vh 40vh 10vh;
+  grid-template-areas:
+    "f"
+    "g"
+    "h";
+}
+
+.updateEmployeeFormBody {
+  display: grid;
+  grid-area: g;
+  grid-template-columns: 13.5vw 13.5vw 13.5vw;
+  grid-template-rows: 10vh 10vh 10vh 10vh;
+  grid-template-areas:
+    "i j k"
+    "l m n"
+    "o p q"
+    "r s t";
+}
+#updateAddressStreet {
+  grid-area: i;
+  align-self: center;
+  justify-self: center;
+}
+
+#updateAddressCity {
+  grid-area: j;
+  align-self: center;
+  justify-self: center;
+}
+
+#updateAddressState {
+  grid-area: k;
+  align-self: center;
+  justify-self: center;
+}
+
+#updateAddressZip {
+  grid-area: l;
+  align-self: center;
+  justify-self: center;
+}
+
+#updateHireDate {
+  grid-area: m;
+  align-self: center;
+  justify-self: center;
+}
+
+#updateSalaryBonus {
+  grid-area: n;
+  align-self: center;
+  justify-self: center;
+}
+
+#updateUsername {
+  grid-area: q;
+  align-self: center;
+  justify-self: center;
+}
+
+#updateExtension {
+  grid-area: p;
+  align-self: center;
+  justify-self: center;
+}
+
+.updateEmployeeFormRight label {
+  color: #fff;
+  padding: 0.2rem;
+  font-size: 0.5rem;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.updatePosition {
+  grid-area: s;
+  align-self: center;
+  justify-self: center;
+}
+
+.updatePhoneNum {
+  grid-area: o;
+  align-self: center;
+  justify-self: center;
+}
+
+#updateEmail {
+  grid-area: r;
+  align-self: center;
+  justify-self: center;
+}
+
+.list {
+  text-align: start;
+  justify-self: start;
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  background: #000;
+  border-radius: 4px;
+}
+
+.list li {
+  list-style: none;
+  padding: 0.5rem;
+  color: #ddd;
+  font-size: 0.4rem;
+  cursor: pointer;
+  display: none;
+}
+
+.list > li:hover {
+  background: rgb(173, 166, 166);
+}
+
+.updatePosition:hover li {
+  display: block;
+  transition: 0.2s;
+
+  transition-timing-function: ease-out;
+}
+
+#updateEmployeeFormButton {
+  grid-area: t;
+  align-self: center;
+  width: 60%;
+  justify-self: center;
+}
+
+@media screen and (max-width: 1022px) {
+  .employeeFormWrapper {
+    display: grid;
+    grid-template-columns: 60.5vw;
+    grid-template-rows: 15.5vh 45.5vh;
+    grid-template-areas:
+      "a"
+      "b";
+  }
+  .employeeFormLeft {
+    display: grid;
+    grid-area: a;
+    grid-template-columns: 60.5vw;
+    grid-template-rows: 13vh 2.5vh;
+    grid-template-areas:
+      "c"
+      "d";
+  }
+  .employeeFormName {
+    grid-area: c;
+  }
+  .id {
+    grid-area: d;
+  }
+
+  .employeeFormRight {
+    grid-area: b;
+    grid-template-columns: 60.5vw;
+    grid-template-rows: 44.5vh;
+    grid-template-areas: "bb";
+    padding: 0;
+    margin: 0;
+  }
+
+  .updateEmployeeFormRight {
+    grid-area: bb;
+    grid-template-columns: 60.5vw;
+    grid-template-rows: 44.5vh;
+
+    grid-template-areas: "bbb";
+    padding: 0;
+    margin: 0;
+  }
+  .updateEmployeeFormBody {
+    grid-area: bbb;
+    display: grid;
+    width: 60.5vw;
+    height: 44.5vh;
+    margin: 0.5rem;
+    padding: 0.5rem;
+
+    box-sizing: border-box;
+    grid-template-columns: 19vw 19vw 19vw;
+    grid-template-rows: 10vh 10vh 10vh 10vh;
+    grid-template-areas:
+      "i j k"
+      "l m n"
+      "o p q"
+      "r s t";
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .updateEmployeeFormBody {
+    grid-area: bbb;
+    display: grid;
+    width: 60.5vw;
+    height: 42.5vh;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    grid-template-columns: 29vw 29vw;
+    grid-template-rows: repeat(6, 10vh);
+    grid-template-areas:
+      "i j"
+      "k l"
+      "m n"
+      "o p "
+      "q r"
+      "s t";
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .employeeFormName {
+    font-size: 1rem;
+    line-height: 1.3rem;
+  }
+  .defaultInput,
+  .errorInput {
+    width: 5rem;
+  }
+
+  .employeeFormLeft {
+    grid-template-rows: 11vh 4.5vh;
+  }
+
+  .employeeFormLeft > .id {
+    align-self: start;
+  }
+
+  .updateEmployeeFormRight {
+    margin: 0;
+  }
+  .updateEmployeeFormBody {
+    height: 44.5vh;
+    width: 60.5vw;
+
+    margin: 0;
+    padding: 0.5rem;
+  }
+}
