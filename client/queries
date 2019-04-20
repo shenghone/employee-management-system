@@ -1,0 +1,55 @@
+{
+	employee(id: "5997456604a898b529b5ed40"){
+    FirstName
+    LastName
+    id
+    SalaryBonus
+  	Email
+    Username
+    createdAt
+  }
+}
+
+
+mutation{
+  SignUp(FirstName: "Sheng Hung"
+      LastName: "Tsai"
+      AddressStreet: "8935 Yonge"
+      AddressState: "ON"
+      AddressCity: "Richmond Hill"
+      AddressZip: "L3T 7Y5"
+      Email: "shengho@gmail.com"
+      Username: "shengie"
+    	Password: "Mas113!@#"
+    	Position: "5997339b04a898b529b5ec06"
+    
+  ){
+    Username
+    id
+    Email
+    AddressStreet
+  }
+}
+
+mutation {
+  CreateTeam(
+    TeamName: "oh yeahyayayayaya"
+    ProjectIds: ["599af650fc13ae7e60000165","599af650fc13ae7e60000066"]
+    EmployeeIds: ["5997456604a898b529b5ed45"]
+    TeamLeadId: "5997456604a898b529b5ed40"
+  ) {
+    TeamName
+    TeamLead{
+      id
+    }
+  }
+}
+
+
+{
+  Positions{
+    id
+    PositionName
+    PositionDescription
+  }
+}

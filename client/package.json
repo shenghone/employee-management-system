@@ -1,0 +1,28 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon -r esm .",
+    "start": "node -r esm ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "apollo-server": "^2.4.6",
+    "bcryptjs": "^2.4.3",
+    "connect-redis": "^3.4.0",
+    "dotenv": "^6.2.0",
+    "esm": "^3.2.5",
+    "express": "^4.16.4",
+    "express-session": "^1.15.6",
+    "graphql": "^14.1.1",
+    "joi": "^14.3.1",
+    "mongoose": "^5.4.14",
+    "only": "0.0.2",
+    "react-dayjs": "^0.1.4",
+    "react-joi-validation": "^1.7.0"
+  }
+}
