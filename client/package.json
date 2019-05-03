@@ -11,12 +11,10 @@
     "apollo-client": "^2.5.1",
     "apollo-link-http": "^1.5.14",
     "dayjs": "^1.8.11",
-    "dayjs-plugin-utc": "^0.1.0",
     "formik": "^1.5.1",
     "graphql": "^14.2.0",
     "gsap": "^2.1.2",
     "joi": "^14.3.1",
-    "pixi.js": "^4.8.7",
     "react": "^16.8.5",
     "react-apollo": "^2.5.3",
     "react-dom": "^16.8.5",
@@ -36,6 +34,7 @@
   "eslintConfig": {
     "extends": "react-app"
   },
+  "homepage": "https://management-demo-app.surge.sh",
   "browserslist": [
     ">0.2%",
     "not dead",
