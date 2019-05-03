@@ -1,30 +1,30 @@
 import React, { Component } from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import { graphql } from "react-apollo";
-import NavBar from "./navbar/navbar";
+import NavBar from "./components/navbar/navbar";
 
-import Employees from "./employees/employees";
-import Employee from "./employees/employee/employee";
-import EmployeeForm from "./employees/employee/employeeForm/employeeForm";
+import Employees from "./components/employees/employees";
+import Employee from "./components/employees/employee/employee";
+import EmployeeForm from "./components/employees/employee/employeeForm/employeeForm";
 
-import Projects from "./projects/projects";
-import Project from "./projects/project/project";
-import ProjectForm from "projects/project/projectForm/projectForm";
-import NewProject from "./projects/newProject/newProjectForm";
+import Projects from "./components/projects/projects";
+import Project from "./components/projects/project/project";
+import ProjectForm from "./components/projects/project/projectForm/projectForm";
+import NewProject from "./components/projects/newProject/newProjectForm";
 
-import Teams from "./teams/teams";
-import Team from "./teams/team/team";
-import TeamForm from "./teams/team/teamForm/teamForm";
-import NewTeam from "./teams/newTeam/newTeam";
+import Teams from "./components/teams/teams";
+import Team from "./components/teams/team/team";
+import TeamForm from "./components/teams/team/teamForm/teamForm";
+import NewTeam from "./components/teams/newTeam/newTeam";
 
-import Register from "./register/register";
-import Footer from "./footer/footer";
-import Home from "./home/home";
-import About from "./about/about";
-import PrivateRoute from "./privatedRoute/privateRoute";
-import Login from "./login/login";
-import ErrorPage from "./errorPage/errorPage";
-import { meQuery } from "./queries/queries";
+import Register from "./components/register/register";
+import Footer from "./components/footer/footer";
+import Home from "./components/home/home";
+import About from "./components/about/about";
+import PrivateRoute from "./components/privatedRoute/privateRoute";
+import Login from "./components/login/login";
+import ErrorPage from "./components/errorPage/errorPage";
+import { meQuery } from "./components/queries/queries";
 import "./App.css";
 
 class App extends Component {

@@ -229,6 +229,21 @@
   justify-self: center;
 }
 
+.contact > ul > li > a {
+  color: #fff;
+}
+
+.contact > ul > li > a:visited {
+  color: #fff;
+}
+.contact > ul > li > a:active {
+  color: #fff;
+}
+
+.contact > ul > li > a:hover {
+  opacity: 0.75;
+}
+
 .contact > ul {
   display: block;
 }

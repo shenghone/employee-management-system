@@ -1,6 +1,6 @@
 import * as Yup from "yup";
 
-import { parseDate } from "../util/util";
+import { parseDate } from "../../util/util";
 
 const dateFormat = /^((?:20)\d\d)-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])$/;
 Yup.addMethod(Yup.mixed, "notInEmp", function(array, message) {

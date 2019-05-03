@@ -52,7 +52,6 @@ class about extends Component {
             <h3>font-end</h3>
             <p>React</p>
             <p>Apollo Client</p>
-            <p>PixiJs</p>
           </div>
           <div className="backEnd">
             <h3>back-end</h3>
@@ -65,7 +64,7 @@ class about extends Component {
           <div className="descContent">
             <p>
               &nbsp;&nbsp; The web app is built with React, Express, GraphQL,
-              PixiJs, a few gray hairs and countless Monsters.
+              few gray hairs and countless Monsters.
             </p>
             <br />
             <p>
@@ -73,7 +72,6 @@ class about extends Component {
               authenticated/authorized using express-session stored on Redis.
               Joi and Yup are used to validate user input. Formik is used for
               handling user input. Dayjs is used to handle date related data.
-              PixiJs is used to illustrate the corona-like landing page.
             </p>
             <br />
             <p>
@@ -130,13 +128,27 @@ class about extends Component {
             <div className="contact">
               <ul>
                 <li>
-                  <i className="fas fa-envelope" />
+                  <a href="mailto:shenghone@gmail.com">
+                    <i className="fas fa-envelope" />
+                  </a>
                 </li>
                 <li>
-                  <i className="fab fa-github" />
+                  <a
+                    href="https://github.com/shenghone"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <i className="fab fa-github" />
+                  </a>
                 </li>
                 <li>
-                  <i className="fab fa-instagram" />
+                  <a
+                    href="https://www.instagram.com/shenghone/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <i className="fab fa-instagram" />
+                  </a>
                 </li>
               </ul>
             </div>
