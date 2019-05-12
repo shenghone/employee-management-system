@@ -28,18 +28,12 @@ class navbar extends Component {
   }
 
   classType = () => {
-    if (this.state.currentUrl === "/" && this.props.authenticated) {
+    if (!this.props.authenticated) {
       return "NavClass whiteNav";
     } else {
       return "NavClass darkNav";
     }
   };
-
-  /*setCurrentNav = val => event => {
-    this.setState({
-      [name]: event.target.value
-    });
-  };*/
 
   toggleBurgerClass = () => {
     if (this.state.authStatus) {

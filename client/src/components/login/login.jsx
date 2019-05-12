@@ -65,7 +65,6 @@ class login extends Component {
         });
 
         if (suc) {
-          console.log("Auth in login is now: " + this.state.authentication);
           this.verifyAuthStatus(true);
           this.props.history.push("/");
         }

@@ -158,7 +158,7 @@ class about extends Component {
               &nbsp;I dedicate myself to becoming a fullstack web developer. I
               love all the beautiful things made with codes. This is my very
               first personal project to help myself dive deeper into React,
-              GraphQL, PixiJs and CSS.
+              GraphQL and CSS.
             </p>
           </div>
         </div>

@@ -7,7 +7,6 @@
   left: 0;
   height: 100vh;
   width: 100%;
-
   z-index: 1;
   animation: fadeOutAndHide 1s forwards;
   opacity: 1;
@@ -50,7 +49,6 @@
 }
 
 .webDesc > h3 {
-  color: rgba(141, 141, 140, 0.9);
   margin-top: 2rem;
   font-size: 0.7rem;
   letter-spacing: 0.2rem;
@@ -60,7 +58,7 @@
   opacity: 0;
   transition: 2s;
   animation: toFadeIn 3s forwards;
-  text-shadow: 2px 2px 2px rgba(255, 255, 255, 0.5);
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
 
 .webDesc:hover ~ .descText {
@@ -87,10 +85,18 @@
 .descText > h4 {
   text-align: center;
   font-size: 4rem;
-  color: #fff;
+
   margin: 1rem 0;
   text-transform: uppercase;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+.black {
+  color: #000;
+}
+
+.white {
+  color: #fff;
 }
 
 .descText:after {
