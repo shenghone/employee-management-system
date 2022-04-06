@@ -11,20 +11,21 @@ require("dotenv").config();
 (async () => {
   try {
     await mongoose.connect(
-      `mongodb://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@${
-        process.env.DB_HOST
-      }:${process.env.DB_PORT}/${process.env.DB_NAME}`,
-      { useNewUrlParser: true }
-    );
+     `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@${
+       process.env.DB_HOST
+     }/${process.env.DB_NAME}?retryWrites=true&w=majority`,
+     { useNewUrlParser: true }
+   );
     const path = "/graphql";
     const app = express();
     app.disable("x-powered-by");
     const RedisStore = connectRedis(session);
-    const store = new RedisStore({
-      host: process.env.REDIS_HOST,
-      port: process.env.REDIS_PORT,
-      pass: process.env.REDIS_PASSWORD
-    });
+    const store = new MongoStore({
+        uri: `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@${
+          process.env.DB_HOST}`,
+        databaseName: process.env.DB_NAME,
+        collection: 'team-api-sessions',
+    })
 
     app.use(
       session({
