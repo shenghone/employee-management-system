@@ -47,7 +47,7 @@ mongoose.set("useFindAndModify", false);
       typeDefs,
       resolvers,
       schemaDirectives,
-      playground: false,
+      playground: true,
       context: ({ req, res }) => ({ req, res }),
       introspection: true
     });
