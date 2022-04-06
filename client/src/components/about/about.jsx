@@ -68,8 +68,8 @@ class about extends Component {
             </p>
             <br />
             <p>
-              &nbsp;Data is stored on mLab(MongoDB). User is
-              authenticated/authorized using express-session stored on Redis.
+              &nbsp;Data is stored on Mongo Atlas. User is
+              authenticated/authorized using express-session stored on Mongo Atlas.
               Joi and Yup are used to validate user input. Formik is used for
               handling user input. Dayjs is used to handle date related data.
             </p>

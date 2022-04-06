@@ -53,7 +53,7 @@ mongoose.set("useFindAndModify", false);
     });
 
     const corsOptions = {
-      origin: "https://management-demo-app.surge.sh",
+      origin: "https://team-api-sheng.surge.sh",
       credentials: true
     };
 
