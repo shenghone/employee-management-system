@@ -1,13 +1,14 @@
 import { ApolloServer } from "apollo-server-express";
 import express from "express";
 import session from "express-session";
-import connectRedis from "connect-redis";
 import typeDefs from "./typeDefs";
 import resolvers from "./resolvers";
 import mongoose from "mongoose";
 import schemaDirectives from "./directives";
+const MongoStore = require('connect-mongodb-session')(session)
+//to disable the depreciate warning as mongoose documentation suggests
 require("dotenv").config();
-
+mongoose.set("useFindAndModify", false);
 (async () => {
   try {
     await mongoose.connect(
@@ -19,7 +20,6 @@ require("dotenv").config();
     const path = "/graphql";
     const app = express();
     app.disable("x-powered-by");
-    const RedisStore = connectRedis(session);
     const store = new MongoStore({
         uri: `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@${
           process.env.DB_HOST}`,
