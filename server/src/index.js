@@ -37,10 +37,10 @@ mongoose.set("useFindAndModify", false);
         rolling: true,
         saveUninitialized: false,
         cookie: {
-             masAge: parseInt(process.env.SESS_LIFETIME),
-             sameSite: "none",
-             secure: true
-          }
+          maxAge: parseInt(process.env.SESS_LIFETIME),
+          sameSite: "none",
+          secure: true
+        }
       })
     );
 
@@ -53,15 +53,9 @@ mongoose.set("useFindAndModify", false);
       introspection: true
     });
 
-    const corsOptions = {
-      origin: "https://employee-management-system-iota.vercel.app",
-      //methods: ['POST', 'PUT', 'GET', 'OPTIONS', 'HEAD'],
-      credentials: true
-    };
 
     server.applyMiddleware({
       app,
-      path,
       cors: false
     });
     const PORT = process.env.PORT || 8083;
