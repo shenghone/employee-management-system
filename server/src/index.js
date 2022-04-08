@@ -46,8 +46,9 @@ require("dotenv").config();
         saveUninitialized: false,
         cookie: {
           masAge: parseInt(process.env.SESS_LIFETIME),
-          //sameSite: false,
-          //secure: true
+          sameSite: false, // this may need to be false is you are accessing from another React app
+          httpOnly: false, // this must be false if you want to access the cookie
+          secure: true
         }
       })
     );
