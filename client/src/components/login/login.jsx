@@ -15,7 +15,7 @@ class login extends Component {
       authentication: this.props.authenticated,
       errorMessage: "",
       defaultAccount: "demoaccount@gmail.com",
-      defaultPassword: "Password!000"
+      defaultPassword: "Mas!@#113"
     };
   }
 
@@ -65,6 +65,7 @@ class login extends Component {
         });
 
         if (suc) {
+          console.log(suc);
           this.verifyAuthStatus(true);
           this.props.history.push("/");
         }

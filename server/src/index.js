@@ -53,7 +53,7 @@ mongoose.set("useFindAndModify", false);
     });
 
     const corsOptions = {
-      origin: "http://localhost:3000",
+      origin: process.env.FRONT_END
       credentials: true
     };
 

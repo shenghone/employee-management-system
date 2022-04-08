@@ -1,23 +1,27 @@
-import React, { Component } from "react";
+import React, { useEffect,useState } from "react";
 import { Route, Redirect } from "react-router-dom";
 import { graphql } from "react-apollo";
 import { meQuery } from "../queries/queries";
 
-class privateRoute extends Component {
-  renderRoute = () => {
-    const { data, component: Component, ...rest } = this.props;
-    if (!data || data.loading) {
+
+const privateRoute = ({data, component: Component, ...rest})=>{
+  const [loaded,setLoaded] = useState(false);
+  useEffect(()=>{
+    setLoaded(true)
+  },[])
+  const renderRoute=()=>{
+    if (!data || data.loading || !loaded) {
       return null;
     }
-    if (!data.Me) {
+    if (!data.Me && loaded) {
       return <Redirect to="/login" />;
     }
     return <Component {...rest} />;
-  };
-  render() {
-    const { data, component, ...rest } = this.props;
-    return <Route {...rest} render={this.renderRoute} />;
   }
+  return (
+    <Route {...rest} render={renderRoute}/>
+  )
 }
+
 
 export default graphql(meQuery)(privateRoute);
