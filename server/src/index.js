@@ -54,7 +54,8 @@ mongoose.set("useFindAndModify", false);
     });
 
     const corsOptions = {
-      origin: process.env.FRONT_END,
+      origin: "https://employee-management-system-iota.vercel.app",
+      methods: ['POST', 'PUT', 'GET', 'OPTIONS', 'HEAD'],
       credentials: true
     };
 
