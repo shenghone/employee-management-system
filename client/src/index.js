@@ -10,7 +10,7 @@ import { ApolloProvider } from "react-apollo";
 
 const client = new ApolloClient({
   link: createHttpLink({
-    uri: "https://sheng-team-api.herokuapp.com/graphql",
+    uri: `${process.env.REACT_APP_BACK_END}/graphql`,
     credentials: "include"
   }),
   cache: new InMemoryCache()
