@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "engines": {
-    "node": "11.13.0"
+    "node": ">=14.x"
   },
   "dependencies": {
     "apollo-boost": "^0.3.1",
