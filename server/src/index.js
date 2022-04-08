@@ -38,7 +38,7 @@ mongoose.set("useFindAndModify", false);
         cookie: {
           masAge: parseInt(process.env.SESS_LIFETIME),
           sameSite: "none",
-          secure: true
+          //secure: true
         }
       })
     );
