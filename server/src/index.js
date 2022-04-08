@@ -33,7 +33,7 @@ require("dotenv").config();
       uri: `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@${
         process.env.DB_HOST}`,
       databaseName: process.env.DB_NAME,
-      collection: 'sessions',
+      collection: 'team-api-session',
   })
 
     app.use(
@@ -46,8 +46,8 @@ require("dotenv").config();
         saveUninitialized: false,
         cookie: {
           masAge: parseInt(process.env.SESS_LIFETIME),
-          //sameSite: true,
-          //secure: true
+          sameSite: false,
+          secure: true
         }
       })
     );
