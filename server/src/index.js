@@ -43,7 +43,11 @@ mongoose.set("useFindAndModify", false);
         }
       })
     );
-
+    const corsOptions = {
+      origin: "https://employee-management-system-iota.vercel.app",
+      credentials: true,
+    };
+    app.use(cors(corsOptions));
     const server = new ApolloServer({
       typeDefs,
       resolvers,
