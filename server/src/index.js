@@ -20,6 +20,7 @@ mongoose.set("useFindAndModify", false);
     const path = "/graphql";
     const app = express();
     app.disable("x-powered-by");
+    app.set('trust proxy', 1) // trust first proxy
     const store = new MongoStore({
         uri: `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@${
           process.env.DB_HOST}`,
@@ -38,7 +39,7 @@ mongoose.set("useFindAndModify", false);
         cookie: {
           masAge: parseInt(process.env.SESS_LIFETIME),
           sameSite: "none",
-          //secure: true
+          secure: true
         }
       })
     );
