@@ -53,6 +53,9 @@ mongoose.set("useFindAndModify", false);
       resolvers,
       schemaDirectives,
       playground: true,
+      fetchOptions: {
+       credentials: "include",
+     },
       context: ({ req, res }) => ({ req, res }),
       introspection: true
     });
