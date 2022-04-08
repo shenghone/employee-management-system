@@ -4,6 +4,7 @@ import session from "express-session";
 import typeDefs from "./typeDefs";
 import resolvers from "./resolvers";
 import mongoose from "mongoose";
+import cors from "cors";
 import schemaDirectives from "./directives";
 const MongoStore = require('connect-mongodb-session')(session)
 //to disable the depreciate warning as mongoose documentation suggests
