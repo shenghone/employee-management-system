@@ -8,6 +8,7 @@ import schemaDirectives from "./directives";
 const MongoStore = require('connect-mongodb-session')(session)
 //to disable the depreciate warning as mongoose documentation suggests
 require("dotenv").config();
+const PORT = process.env.PORT || 8083;
 mongoose.set("useFindAndModify", false);
 (async () => {
   try {
@@ -20,7 +21,6 @@ mongoose.set("useFindAndModify", false);
     const path = "/graphql";
     const app = express();
     app.disable("x-powered-by");
-    app.set('trust proxy', 1)
     const store = new MongoStore({
         uri: `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@${
           process.env.DB_HOST}`,
@@ -58,12 +58,10 @@ mongoose.set("useFindAndModify", false);
       app,
       cors: false
     });
-    const PORT = process.env.PORT || 8083;
+
     app.listen(PORT, () => {
       console.log(
-        `🚀 Server ready at http://localhost:${process.env.APP_PORT}${
-          server.graphqlPath
-        }`
+        `🚀 Server is ready`
       );
     });
   } catch (err) {
