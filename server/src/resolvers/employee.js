@@ -6,8 +6,10 @@ import { UserInputError } from "apollo-server-express";
 
 export default {
   Query: {
-    Me: (parent, args, { req }, info) => {
-      return Employee.findById(req.session.employeeId);
+    Me: async(parent, args, { req }, info) => {
+      console.log("line 10")
+      console.log("lala")
+      return await Employee.findById(req.session.employeeId);
     },
     Employees: (parent, args, context, info) => {
       return Employee.find({});
