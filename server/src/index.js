@@ -47,27 +47,18 @@ require("dotenv").config();
         cookie: {
           masAge: parseInt(process.env.SESS_LIFETIME),
           sameSite: false, // this may need to be false is you are accessing from another React app
-          httpOnly: false, // this must be false if you want to access the cookie
           secure: true
         }
       })
     );
 
     const corsOptions = {
-      origin: "https://employee-management-system-iota.vercel.app",
+      origin: `${process.env.FRONT_END}`,
       credentials: true,
       //methods: ['GET', 'PUT', 'POST', 'OPTIONS'],
     };
     app.use(cors(corsOptions));
-    app.use(function(req, res, next) {
-      res.header('Content-Type', 'application/json;charset=UTF-8')
-      res.header('Access-Control-Allow-Credentials', true)
-      res.header(
-        'Access-Control-Allow-Headers',
-        'Origin, X-Requested-With, Content-Type, Accept'
-      )
-      next()
-    })
+
     const server = new ApolloServer({
       typeDefs,
       resolvers,
