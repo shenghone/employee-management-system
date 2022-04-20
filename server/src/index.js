@@ -47,7 +47,7 @@ require("dotenv").config();
         cookie: {
           masAge: parseInt(process.env.SESS_LIFETIME),
           sameSite: false, // this may need to be false is you are accessing from another React app
-          secure: true
+          //secure: true
         }
       })
     );
