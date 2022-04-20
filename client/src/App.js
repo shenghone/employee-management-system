@@ -21,7 +21,7 @@ import Register from "./components/register/register";
 import Footer from "./components/footer/footer";
 import Home from "./components/home/home";
 import About from "./components/about/about";
-import PrivateRoute from "./components/privatedRoute/privateRoute";
+//import Route from "./components/privatedRoute/Route";
 import Login from "./components/login/login";
 import ErrorPage from "./components/errorPage/errorPage";
 import { meQuery } from "./components/queries/queries";
@@ -100,39 +100,39 @@ class App extends Component {
               render={props => <About authenticated={this.state.defaultAuth} />}
             />
 
-            <PrivateRoute
+            <Route
               path="/team/edit/:teamId"
               exact
               component={TeamForm}
             />
-            <PrivateRoute path="/teams" exact component={Teams} />
-            <PrivateRoute path="/team/new" exact component={NewTeam} />
-            <PrivateRoute path="/team/:teamId" exact component={Team} />
+            <Route path="/teams" exact component={Teams} />
+            <Route path="/team/new" exact component={NewTeam} />
+            <Route path="/team/:teamId" exact component={Team} />
 
-            <PrivateRoute path="/project/new" exact component={NewProject} />
+            <Route path="/project/new" exact component={NewProject} />
 
-            <PrivateRoute
+            <Route
               path="/project/edit/:projectId"
               exact
               component={ProjectForm}
             />
-            <PrivateRoute
+            <Route
               path="/project/:projectId"
               exact
               component={Project}
             />
-            <PrivateRoute path="/employees" exact component={Employees} />
-            <PrivateRoute
+            <Route path="/employees" exact component={Employees} />
+            <Route
               path="/employee/:employeeId"
               exact
               component={Employee}
             />
-            <PrivateRoute
+            <Route
               path="/employee/edit/:employeeId"
               exact
               component={EmployeeForm}
             />
-            <PrivateRoute exact path="/projects" component={Projects} />
+            <Route exact path="/projects" component={Projects} />
             <Route component={ErrorPage} />
           </Switch>
           <Footer />
