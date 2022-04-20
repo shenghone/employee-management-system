@@ -7,8 +7,14 @@ import { meQuery } from "../queries/queries";
 const privateRoute = ({data, component: Component, ...rest})=>{
   const [loaded,setLoaded] = useState(false);
   useEffect(()=>{
+    if(data.loading){
       data.refetch();
-  },[])
+    }
+  },[data])
+  useEffect(()=>{
+    console.log(data)
+  },[data])
+
 
   const renderRoute=()=>{
     if (!data || data.loading || !loaded) {
